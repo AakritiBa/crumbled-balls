@@ -11,6 +11,7 @@ constructor(x,y,r)
     this.y=y
     this.r=r
     this.body=Bodies.circle(this.x, this.y, this.r/2, options)
+    this.image=loadImage("paper.png")
     World.add(world, this.body)
 }
 display(){
@@ -20,7 +21,8 @@ display(){
     rectMode(CENTER)
     strokeWeight(3)
     fill(255,0,255)
-    ellipse(0,0,this.r,this.r)
+    imageMode(CENTER)
+    image(this.image, 0, 0, this.r, this.r)
     pop()
 }
 }
